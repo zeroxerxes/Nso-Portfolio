@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Analytics -->
+    <!-- Replace G-XXXXXXXXXX with your actual Google Analytics Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bernice Enang Nso Keshu - Identity Development Counsellor & Life Coach</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2E5339;      /* Forest Green */
+            --secondary: #C1A36E;    /* Muted Gold */
+            --accent: #4E342E;       /* Rich Brown */
+            --light: #FAF8F5;        /* Off-White */
+            --dark: #1C1B1A;         /* Dark Charcoal */
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px; /* Offset for fixed nav */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .nav-toggle {
+            display: none; /* Hidden on desktop */
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary);
+            font-size: 2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .nav-links.active {
+            display: flex;
+            transform: translateX(0);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), 
+                        url('assets/2147663838.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .btn {
+            padding: 0.75rem 2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* About Section */
+        .section {
+            padding: 6rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(193, 163, 110, 0.1);
+            border-radius: 10px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: #f9f9f9;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--light);
+            padding: 6rem 0;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .testimonial-info h4 {
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+        
+        .testimonial-info p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        /* Blog Section */
+        .blog {
+            padding: 6rem 0;
+            background-color: #f9f9f9;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .blog-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .blog-card:hover .blog-image img {
+            transform: scale(1.05);
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-date {
+            color: var(--secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .blog-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .blog-excerpt {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .project-stats {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .stat {
+            background: rgba(46, 83, 57, 0.1);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        /* Benk Assist Section */
+        .benk-assist {
+            background-color: #f9f9f9;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-subtitle {
+            color: var(--secondary);
+            font-size: 1.25rem;
+            margin-top: 1rem;
+        }
+        
+        .benk-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .benk-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .benk-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benk-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .benk-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .whatsapp-cta {
+            background: linear-gradient(135deg, var(--primary), #1e3a29);
+            border-radius: 10px;
+            padding: 2rem;
+            color: white;
+            margin-top: 4rem;
+        }
+        
+        .whatsapp-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .whatsapp-content .material-icons {
+            font-size: 3rem;
+            color: var(--secondary);
+        }
+        
+        .whatsapp-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #25D366;
+            color: white !important;
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* FIHOF Foundation Section */
+        .fihof {
+            background: linear-gradient(rgba(46, 83, 57, 0.9), rgba(46, 83, 57, 0.9)), 
+                        url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .fihof h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .fihof-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+        
+        .fihof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .fihof-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .fihof-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .fihof-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .fihof-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .fihof-card p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background-color: white;
+            border: 1px solid #ddd;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact {
+            background-color: rgba(46, 83, 57, 0.05); /* Light primary background */
+        }
+        .contact .section-title {
+            color: var(--primary); /* Use primary color for the title */
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--accent);
+            color: rgba(255, 255, 255, 0.9);
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .footer-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        .footer-content p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .footer-social-link {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .footer-social-link:hover {
+            color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 0;
+        }
+        
+        .footer-contact a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            color: var(--secondary);
+        }
+
+        /* Contact form improvements */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact .btn-primary {
+            background: var(--secondary);
+            border-color: var(--secondary);
+            transition: all 0.3s ease;
+        }
+
+        .contact .btn-primary:hover {
+            background: #c9a96e;
+            border-color: #c9a96e;
+            transform: translateY(-2px);
+        }
+        
+        /* SVG Icon Sizing */
+        .w-5 { width: 1.25rem; } /* 20px */
+        .h-5 { height: 1.25rem; }
+        .w-6 { width: 1.5rem; }  /* 24px */
+        .h-6 { height: 1.5rem; }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .nav-toggle {
+                display: block; /* Show hamburger on mobile */
+                z-index: 1001; /* Ensure it's above the nav links */
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: 70%;
+                max-width: 300px;
+                background-color: white;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .footer-contact {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-social-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo">Bernice Enang</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="menu">
+                <span class="material-icons">menu</span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="#home" class="hover:text-secondary transition-colors active">Home</a>
+                <a href="#about" class="hover:text-secondary transition-colors">About</a>
+                <a href="#services" class="hover:text-secondary transition-colors">Services</a>
+                <a href="#testimonials" class="hover:text-secondary transition-colors">Testimonials</a>
+                <a href="#benk-assist" class="hover:text-secondary transition-colors">Benk Assist</a>
+                <a href="#fihof" class="hover:text-secondary transition-colors">FIHOF</a>
+                <a href="#projects" class="hover:text-secondary transition-colors">Projects</a>
+                <a href="#blog" class="hover:text-secondary transition-colors">Blog</a>
+                <a href="#contact" class="hover:text-secondary transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Restoring Dignity. Redefining Manhood. Rebuilding Families.</h1>
+            <p>Empowering you, Enhancing uniqueness</p>
+            <div class="cta-buttons">
+                <a href="#benk-assist" class="btn btn-primary">Explore Benk Assist</a>
+                <a href="#fihof" class="btn btn-secondary">Discover FIHOF</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Bernice Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">Meet ENANG NEE NSO BERNICE KESHU</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="Assets/Profile.jpg" alt="ENANG nee NSO BERNICE KESHU">
+                </div>
+                <div class="about-text">
+                    <h3>Founder – Benk Assist Consultancy | President – First Housebond Foundation (FIHOF)</h3>
+                    <p>I'm a counsellor, trainer, and leadership coach with over twelve years of experience helping people grow into emotionally intelligent, confident, and community-driven individuals.</p>
+                    <p>At Benk Assist, I guide professionals to strengthen self-awareness and resilience. Through FIHOF, I champion fatherhood reformation—restoring family dignity and building stronger communities.</p>
+                    <p>My mission is to empower individuals to discover their unique potential and contribute meaningfully to their communities.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h4 class="stat-number">12+</h4>
+                            <p class="stat-label">Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 class="stat-number">50+</h4>
+                            <p class="stat-label">Programs Led</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 class="stat-number">1000+</h4>
+                            <p class="stat-label">Lives Impacted</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Connect with Bernice</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">psychology</span>
+                    </div>
+                    <h3>Identity Development</h3>
+                    <p>Guiding individuals through self-discovery and personal growth.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">groups</span>
+                    </div>
+                    <h3>Manhood Empowerment</h3>
+                    <p>Programs to help men embrace confident, authentic leadership.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">family_restroom</span>
+                    </div>
+                    <h3>Family Counseling</h3>
+                    <p>Strengthening family bonds through effective communication, understanding, and healing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What People Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Bernice's guidance helped me rediscover my purpose and rebuild my relationships. Her approach is both compassionate and transformative."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="Assets/my pic.jpg" alt="John D." class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>John D.</h4>
+                            <p>Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The FIHOF program changed my life. I've learned to be a better father and husband through Bernice's insightful coaching."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Michael T." class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Michael T.</h4>
+                            <p>Program Participant</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Bernice's expertise in identity development is unmatched. Her workshops have been invaluable for our organization's leadership team."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah M." class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Sarah M.</h4>
+                            <p>HR Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benk Assist Consultancy Section -->
+    <section class="benk-assist section" id="benk-assist">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Benk Assist Consultancy</h2>
+                <p class="section-subtitle">Building Emotional Intelligence for Success</p>
+            </div>
+            
+            <div class="benk-grid">
+                <div class="benk-card">
+                    <div class="benk-icon">
+                        <span class="material-icons">psychology_alt</span>
+                    </div>
+                    <h3>Identity Development Coaching</h3>
+                    <p>Personalized one-on-one sessions to help you discover your authentic self, overcome limiting beliefs, and unlock your unique potential for personal and professional growth.</p>
+                </div>
+                
+                <div class="benk-card">
+                    <div class="benk-icon">
+                        <span class="material-icons">groups</span>
+                    </div>
+                    <h3>Soft Skills Training</h3>
+                    <p>Interactive workshops and training programs designed to enhance communication, leadership, emotional intelligence, and interpersonal skills for career advancement.</p>
+                </div>
+                
+                <div class="benk-card">
+                    <div class="benk-icon">
+                        <span class="material-icons">business_center</span>
+                    </div>
+                    <h3>Corporate Training</h3>
+                    <p>Customized organizational development programs to foster positive workplace culture, improve team dynamics, and enhance employee well-being and productivity.</p>
+                </div>
+                
+                <div class="benk-card">
+                    <div class="benk-icon">
+                        <span class="material-icons">school</span>
+                    </div>
+                    <h3>Leadership Development</h3>
+                    <p>Comprehensive programs to cultivate resilient and emotionally intelligent leaders who can inspire teams and drive positive organizational change.</p>
+                </div>
+                
+                <div class="benk-card">
+                    <div class="benk-icon">
+                        <span class="material-icons">healing</span>
+                    </div>
+                    <h3>Personal Growth Coaching</h3>
+                    <p>Individual coaching sessions to help you navigate life transitions, overcome challenges, and achieve your personal and professional goals with confidence.</p>
+                </div>
+                
+                <div class="benk-card">
+                    <div class="benk-icon">
+                        <span class="material-icons">family_restroom</span>
+                    </div>
+                    <h3>Family & Relationship Coaching</h3>
+                    <p>Specialized guidance to improve family dynamics, strengthen relationships, and create harmonious home environments through effective communication strategies.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="btn btn-primary">Book a Consultation</a>
+                <div class="whatsapp-cta mt-8">
+                    <div class="whatsapp-content">
+                        <span class="material-icons">chat</span>
+                        <div>
+                            <h3>Join Our WhatsApp Community</h3>
+                            <p>Get daily inspiration, updates, and exclusive content directly on WhatsApp</p>
+                            <a href="https://whatsapp.com/channel/0029Vb53xEk47XeKLqzU1h09" target="_blank" class="btn btn-whatsapp">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.488z"/>
+                                </svg> Follow on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="blog" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="text-center max-w-2xl mx-auto mb-12 text-gray-600">Showcasing impactful programs and initiatives that have transformed lives and communities.</p>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Emotional Intelligence Program">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">2023 - Present</span>
+                        <h3 class="blog-title">Emotional Intelligence Leadership Program</h3>
+                        <p class="blog-excerpt">A comprehensive 12-week program helping corporate leaders develop emotional intelligence skills, resulting in improved team performance and workplace satisfaction.</p>
+                        <div class="project-stats">
+                            <span class="stat">150+ Participants</span>
+                            <span class="stat">95% Satisfaction Rate</span>
+                        </div>    
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Fatherhood Initiative">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">2022 - 2024</span>
+                        <h3 class="blog-title">FIHOF Fatherhood Initiative</h3>
+                        <p class="blog-excerpt">A community-based program supporting fathers in developing essential parenting skills, emotional awareness, and family leadership capabilities.</p>
+                        <div class="project-stats">
+                            <span class="stat">300+ Families</span>
+                            <span class="stat">85% Success Rate</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="Youth Mentorship">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">2021 - Present</span>
+                        <h3 class="blog-title">Young Men's Mentorship Program</h3>
+                        <p class="blog-excerpt">A mentorship initiative connecting young men with positive role models to foster personal development, career guidance, and life skills.</p>
+                        <div class="project-stats">
+                            <span class="stat">200+ Mentees</span>
+                            <span class="stat">90% Completion Rate</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="Family Restoration">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">2020 - 2023</span>
+                        <h3 class="blog-title">Family Restoration Workshop Series</h3>
+                        <p class="blog-excerpt">Intensive workshops focused on healing family relationships, improving communication patterns, and rebuilding trust within family units.</p>
+                        <div class="project-stats">
+                            <span class="stat">100+ Families</span>
+                            <span class="stat">88% Improvement Rate</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Corporate Wellness">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">2022 - 2024</span>
+                        <h3 class="blog-title">Corporate Wellness & Team Building</h3>
+                        <p class="blog-excerpt">Organizational development programs designed to enhance workplace culture, reduce stress, and improve team collaboration and productivity.</p>
+                        <div class="project-stats">
+                            <span class="stat">25+ Companies</span>
+                            <span class="stat">92% Employee Satisfaction</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Personal Development">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">2019 - Present</span>
+                        <h3 class="blog-title">Personal Breakthrough Coaching</h3>
+                        <p class="blog-excerpt">One-on-one coaching programs helping individuals overcome personal challenges, set meaningful goals, and achieve breakthrough transformations.</p>
+                        <div class="project-stats">
+                            <span class="stat">500+ Clients</span>
+                            <span class="stat">96% Goal Achievement</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="btn btn-primary">Start Your Journey</a>
+                <div class="mt-8">
+                    <p class="text-gray-600 mb-4">Ready to transform your life or organization?</p>
+                    <a href="https://whatsapp.com/channel/0029Vb53xEk47XeKLqzU1h09" target="_blank" class="btn btn-whatsapp">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.488z"/>
+                                </svg> Contact on WhatsApp
+                            </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- First Housebond Foundation (FIHOF) Section -->
+    <section class="fihof" id="fihof">
+        <div class="container">
+            <h2 class="section-title">First Housebond Foundation (FIHOF)</h2>
+            <p class="fihof-subtitle">Restoring Family Dignity through Male Empowerment</p>
+            
+            <div class="fihof-grid">
+                <div class="fihof-card">
+                    <div class="fihof-icon">
+                        <span class="material-icons">groups</span>
+                    </div>
+                    <h3>Fatherhood Circles</h3>
+                    <p>Safe, supportive spaces where men can share experiences, learn from each other, and develop essential fatherhood skills in a judgment-free environment.</p>
+                </div>
+                
+                <div class="fihof-card">
+                    <div class="fihof-icon">
+                        <span class="material-icons">psychology</span>
+                    </div>
+                    <h3>Trauma-Informed Healing</h3>
+                    <p>Professional therapeutic support addressing past traumas, building emotional resilience, and fostering healthy relationship patterns for men and their families.</p>
+                </div>
+                
+                <div class="fihof-card">
+                    <div class="fihof-icon">
+                        <span class="material-icons">school</span>
+                    </div>
+                    <h3>Community Mentorship</h3>
+                    <p>Connecting young men and boys with positive male role models who provide guidance, support, and practical life skills for personal development.</p>
+                </div>
+                
+                <div class="fihof-card">
+                    <div class="fihof-icon">
+                        <span class="material-icons">family_restroom</span>
+                    </div>
+                    <h3>Family Restoration</h3>
+                    <p>Comprehensive family therapy and counseling services designed to heal relationships, improve communication, and rebuild family bonds.</p>
+                </div>
+                
+                <div class="fihof-card">
+                    <div class="fihof-icon">
+                        <span class="material-icons">business_center</span>
+                    </div>
+                    <h3>Male Leadership Development</h3>
+                    <p>Programs equipping men with leadership skills, emotional intelligence, and community responsibility to become positive change agents.</p>
+                </div>
+                
+                <div class="fihof-card">
+                    <div class="fihof-icon">
+                        <span class="material-icons">healing</span>
+                    </div>
+                    <h3>Wellness & Self-Care</h3>
+                    <p>Holistic wellness programs teaching men the importance of mental health, self-care practices, and work-life balance for sustainable well-being.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-secondary">Join Our Programs</a>
+                    <a href="https://whatsapp.com/channel/0029Vb53xEk47XeKLqzU1h09" target="_blank" class="btn btn-primary">Get Updates</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section blog" id="blog">
+        <div class="container">
+            <h2 class="section-title">Reflections on Identity, Healing & Growth</h2>
+            <p class="text-center max-w-2xl mx-auto mb-12 text-gray-600">Insights and thoughts on personal development, emotional healing, and building stronger relationships.</p>
+
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Self Discovery">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">March 15, 2024</span>
+                        <h3 class="blog-title">The Power of Self-Discovery</h3>
+                        <p class="blog-excerpt">An exploration of the journey to understanding your true identity and unlocking your authentic self.</p>
+                        <div class="project-stats">
+                            <span class="stat">5 min read</span>
+                            <span class="stat">Personal Growth</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Healing Journey">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">February 28, 2024</span>
+                        <h3 class="blog-title">Healing the Wounds of the Past</h3>
+                        <p class="blog-excerpt">Practical steps for overcoming trauma, finding peace, and building emotional resilience for the future.</p>
+                        <div class="project-stats">
+                            <span class="stat">7 min read</span>
+                            <span class="stat">Trauma Healing</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="Family Relationships">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">February 10, 2024</span>
+                        <h3 class="blog-title">Building Stronger Families</h3>
+                        <p class="blog-excerpt">How emotional intelligence can transform your family dynamics and create lasting positive change.</p>
+                        <div class="project-stats">
+                            <span class="stat">6 min read</span>
+                            <span class="stat">Family Dynamics</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#contact" class="btn btn-primary">Share Your Story</a>
+                <div class="mt-8">
+                    <p class="text-gray-600 mb-4">Want to contribute or discuss these topics?</p>
+                    <a href="https://whatsapp.com/channel/0029Vb53xEk47XeKLqzU1h09" target="_blank" class="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.488z"/>
+                        </svg> Join Discussion
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-form">
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" placeholder="How can I help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-accent text-white/80 p-8 text-center">
+        <div class="container max-w-4xl mx-auto">
+            <h3 class="text-xl font-bold mb-4">ENANG nee NSO BERNICE KESHU</h3>
+            <p class="text-sm mb-6 opacity-90">Founder – Benk Assist Consultancy | President – First Housebond Foundation (FIHOF)</p>
+            
+            <div class="footer-social-links">
+                <a href="#" class="social-link" aria-label="Facebook">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Twitter">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.585-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.585.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.058-1.281.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://whatsapp.com/channel/0029Vb53xEk47XeKLqzU1h09" target="_blank" class="social-link" aria-label="WhatsApp">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.488z"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="footer-contact text-sm">
+                <p class="flex items-center justify-center gap-2">
+                    <span class="material-icons text-secondary">location_on</span>
+                    Yaoundé, Cameroon
+                </p>
+                <p class="flex items-center justify-center gap-2 mt-2">
+                    <span class="material-icons text-secondary">email</span>
+                    <a href="mailto:berniceenang@gmail.com" class="hover:text-secondary transition-colors">berniceenang@gmail.com</a>
+                </p>
+                <p class="flex items-center justify-center gap-2 mt-2">
+                    <span class="material-icons text-secondary">phone</span>
+                    <a href="tel:+237677718822" class="hover:text-secondary transition-colors">(+237) 677 718 822</a> / <a href="tel:+237650078429" class="hover:text-secondary transition-colors">650 078 429</a>
+                </p>
+            </div>
+            
+            <div class="border-t border-white/20 pt-6 mt-6">
+                <p class="text-sm opacity-80 mb-2">&copy; 2025 ENANG nee NSO BERNICE KESHU</p>
+                <p class="text-xs opacity-60">Benk Assist Consultancy | First Housebond Foundation (FIHOF)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('nav-toggle');
+            const navLinks = document.getElementById('nav-links');
+
+            // Toggle mobile menu
+            navToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            // Handle contact form submission with Formspree
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Get form data
+                const formData = new FormData(contactForm);
+
+                // Submit to Formspree
+                fetch('https://formspree.io/f/YOUR_FORM_ID', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Success - show message and reset form
+                        alert('Thank you for your message! I will get back to you soon.');
+                        contactForm.reset();
+                    } else {
+                        // Error - show error message
+                        alert('Oops! There was a problem sending your message. Please try again or contact me directly at berniceenang@gmail.com');
+                    }
+                })
+                .catch(error => {
+                    // Network error
+                    alert('Network error. Please check your connection and try again, or email me directly at berniceenang@gmail.com');
+                    console.error('Form submission error:', error);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
